@@ -6,6 +6,7 @@ import urllib.parse
 import random
 from push import push
 from capture import headers, cookies, data
+import os
 
 url = "https://weread.qq.com/web/book/read"
 renew_url = "https://weread.qq.com/web/login/renewal"
@@ -85,10 +86,11 @@ while True:
         cookies['wr_skey'] = get_wr_skey()
         num -= 1
 
+    PUSHPLUS_TOKEN = os.getenv("PUSHPLUS_TOKEN")
     # 每一次代表30秒，比如你想刷1个小时这里填120，你只需要签到这里填2次
-    if num == 40:
+    if num == 10:
         print("阅读脚本运行已完成！")
-        push("阅读脚本运行已完成！")
+        push("阅读脚本运行已完成！", method="pushplus", pushplus_token="8fee761b0b524389b99a975b932a624f")
         break
     # 确认无s字段
     data.pop('s')
