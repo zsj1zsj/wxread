@@ -90,7 +90,7 @@ while True:
     # 每一次代表30秒，比如你想刷1个小时这里填120，你只需要签到这里填2次
     if num == 60:
         print("阅读脚本运行已完成！")
-        push("阅读脚本运行已完成！", method="pushplus", pushplus_token="8fee761b0b524389b99a975b932a624f")
+        push("阅读脚本运行已完成！", method="pushplus", pushplus_token=PUSHPLUS_TOKEN)
         break
     # 确认无s字段
     data.pop('s')
