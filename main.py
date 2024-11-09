@@ -88,7 +88,7 @@ while True:
 
     PUSHPLUS_TOKEN = os.getenv("PUSHPLUS_TOKEN")
     # 每一次代表30秒，比如你想刷1个小时这里填120，你只需要签到这里填2次
-    if num == 80:
+    if num == 120:
         print("阅读脚本运行已完成！")
         push("阅读脚本运行已完成！", method="pushplus", pushplus_token=PUSHPLUS_TOKEN)
         break
