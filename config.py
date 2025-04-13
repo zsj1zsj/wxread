@@ -23,20 +23,44 @@ curl_str = os.getenv('WXREAD_CURL_BASH')
 
 # headers、cookies是一个省略模版，本地或者docker部署时对应替换
 cookies = {
-    'RK': 'oxEY1bTnXf',
-    'ptcz': '53e3b35a9486dd63c4d06430b05aa169402117fc407dc5cc9329b41e59f62e2b',
-    'pac_uid': '0_e63870bcecc18',
-    'iip': '0',
-    '_qimei_uuid42': '183070d3135100ee797b08bc922054dc3062834291',
-    'wr_avatar': 'https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FeEOpSbFh2Mb1bUxMW9Y3FRPfXwWvOLaNlsjWIkcKeeNg6vlVS5kOVuhNKGQ1M8zaggLqMPmpE5qIUdqEXlQgYg%2F132',
-    'wr_gender': '0',
+    'ptcz': '57e7c8f8f07f13b06fadc94f5e63f7a92514e2c843c53b0d74dda81151386786',
+    'uin': 'o44611321',
+    '_qimei_h38': '06048ac6bdc110eb625d25f10300000cd1811d',
+    'pac_uid': '0_CmXWxBF52P5xw',
+    'suid': 'user_0_CmXWxBF52P5xw',
+    '_qimei_fingerprint': '98e2866c8389ef7e8e6dd4ddf011d2ae',
+    'RK': 'RJHwWF+feX',
+    'wr_gid': '278483624',
+    'wr_fp': '2637993037',
+    'wr_vid': '327488677',
+    'wr_pf': '0',
+    'wr_rt': 'web%40ROH4NSFPNrNXe2gAo_N_AL',
+    'wr_localvid': '68c321108138514a568cb53',
+    'wr_name': 'Lynn',
+    'wr_gender': '1',
+    '_qimei_uuid42': '1940b01292e100002d2ca1980fdbf4f063c8b13850',
+    'wr_avatar': 'https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83erM7bxmkPTPIxIcNZzvYqZrLf3y3PYcBAIHuzIEichTYdZG6jBHSOia4tqkibvVgTaPCsYgz2NIicI7AA%2F132',
+    'wr_skey': '08Uv45bs',
 }
 
 headers = {
     'accept': 'application/json, text/plain, */*',
-    'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,ko;q=0.5',
-    'baggage': 'sentry-environment=production,sentry-release=dev-1730698697208,sentry-public_key=ed67ed71f7804a038e898ba54bd66e44,sentry-trace_id=1ff5a0725f8841088b42f97109c45862',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0',
+    'accept-language': 'en,zh;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,ja;q=0.6',
+    'baggage': 'sentry-environment=production,sentry-release=dev-1744355656859,sentry-public_key=ed67ed71f7804a038e898ba54bd66e44,sentry-trace_id=b1cc66429e2d44e58ed1cd6461dd66fe',
+    'content-type': 'application/json;charset=UTF-8',
+    'dnt': '1',
+    'origin': 'https://weread.qq.com',
+    'priority': 'u=1, i',
+    'referer': 'https://weread.qq.com/web/reader/f1e328e072710bfaf1e87e9k033320e02c30336dcbab9a8',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'sentry-trace': 'b1cc66429e2d44e58ed1cd6461dd66fe-88e81f284baf197c',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    # 'cookie': 'ptcz=57e7c8f8f07f13b06fadc94f5e63f7a92514e2c843c53b0d74dda81151386786; uin=o44611321; _qimei_h38=06048ac6bdc110eb625d25f10300000cd1811d; pac_uid=0_CmXWxBF52P5xw; suid=user_0_CmXWxBF52P5xw; _qimei_fingerprint=98e2866c8389ef7e8e6dd4ddf011d2ae; RK=RJHwWF+feX; wr_gid=278483624; wr_fp=2637993037; wr_vid=327488677; wr_pf=0; wr_rt=web%40ROH4NSFPNrNXe2gAo_N_AL; wr_localvid=68c321108138514a568cb53; wr_name=Lynn; wr_gender=1; _qimei_uuid42=1940b01292e100002d2ca1980fdbf4f063c8b13850; wr_avatar=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83erM7bxmkPTPIxIcNZzvYqZrLf3y3PYcBAIHuzIEichTYdZG6jBHSOia4tqkibvVgTaPCsYgz2NIicI7AA%2F132; wr_skey=08Uv45bs',
 }
 
 
@@ -59,21 +83,21 @@ chapter = [
 建议保留区域|默认读三体，其它书籍自行测试时间是否增加
 """
 data = {
-    "appId": "wb182564874603h266381671",
-    "b": "ce032b305a9bc1ce0b0dd2a",
-    "c": "7f632b502707f6ffaa6bf2e",
-    "ci": 27,
-    "co": 389,
-    "sm": "19聚会《三体》网友的聚会地点是一处僻静",
-    "pr": 74,
-    "rt": 15,
-    "ts": 1744264311434,
-    "rn": 466,
-    "sg": "2b2ec618394b99deea35104168b86381da9f8946d4bc234e062fa320155409fb",
-    "ct": 1744264311,
-    "ps": "4ee326507a65a465g015fae",
-    "pc": "aab32e207a65a466g010615",
-    "s": "36cc0815"
+    'appId': 'wb115321887466h1205141645',
+    'b': 'f1e328e072710bfaf1e87e9',
+    'c': '033320e02c30336dcbab9a8',
+    'ci': 6,
+    'co': 385,
+    'sm': '竿头添彩，后出转精——图文版《明朝那些事',
+    'pr': 0,
+    'rt': 15,
+    'ts': 1744536065606,
+    'rn': 202,
+    'sg': '49e84affe82a70ee108768f98f3d091b00559a16ae919e333806a6439462f181',
+    'ct': 1744536065,
+    'ps': '46032d707a65f364g017062',
+    'pc': 'fcc32a507a65f364g019c0b',
+    's': '46159d82',
 }
 
 
